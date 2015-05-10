@@ -5038,3 +5038,208 @@ Processing by RestaurantsController#show as HTML
   Rendered layouts/_navbar.html.erb (0.0ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 132ms (Views: 130.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/4/edit" for 127.0.0.1 at 2015-05-10 10:58:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered restaurants/_form.html.erb (74.1ms)
+  Rendered restaurants/edit.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_bootstrap.html.erb (343.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 536ms (Views: 467.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/scaffolds.self-6bfa18fbac394794f8e18aecaaf40a74f9c25076e0fa464a548b6f45a74fcc09.css?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-05-10 10:58:05 -0400
+
+
+Started PATCH "/restaurants/4" for 127.0.0.1 at 2015-05-10 10:58:14 -0400
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RI8donEZ7lRsB8GqgnTTEdcqPFJyHie6ZPXNylgdGEKrHfhZA8g5ippAm4y9kB097W+gRr5L4FpcLoOxs9Rk/Q==", "restaurant"=>{"name"=>"Test", "address"=>"test", "phone"=>"test", "website"=>"kd.com", "image"=>#<ActionDispatch::Http::UploadedFile:0x575a6f0 @tempfile=#<Tempfile:C:/Users/Colin/AppData/Local/Temp/RackMultipart20150510-1288-yi5r29.png>, @original_filename="BeOurNextCaseStudy.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"BeOurNextCaseStudy.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Restaurant", "id"=>"4"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `scale' for #<ImageUploader:0x58f6c98>):
+  app/controllers/restaurants_controller.rb:44:in `block in update'
+  app/controllers/restaurants_controller.rb:43:in `update'
+
+
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.1ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x3c5c778 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x3c67740 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x3c69fd8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/restaurants/2/edit" for 127.0.0.1 at 2015-05-10 10:58:41 -0400
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRestaurant Load (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered restaurants/_form.html.erb (3.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_bootstrap.html.erb (45.0ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/5/edit" for 127.0.0.1 at 2015-05-10 10:58:46 -0400
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered restaurants/_form.html.erb (3.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_bootstrap.html.erb (46.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/restaurants/5" for 127.0.0.1 at 2015-05-10 10:58:52 -0400
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kh2snc9PceI7X8BNE0YKfEpTHbCYEXj/er8izY5HaVJ9j0lmvZ6mPM0YmmssosRQcBaBpFREvx9CZGy2ZY4V7Q==", "restaurant"=>{"name"=>"Test", "address"=>"Test", "phone"=>"test", "website"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x4897ae8 @tempfile=#<Tempfile:C:/Users/Colin/AppData/Local/Temp/RackMultipart20150510-1288-q7kkle.jpg>, @original_filename="V1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"V1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[35mRestaurant Load (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `scale' for #<ImageUploader:0x54e6568>):
+  app/controllers/restaurants_controller.rb:44:in `block in update'
+  app/controllers/restaurants_controller.rb:43:in `update'
+
+
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.0.0/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x3c5c778 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x3c67740 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x3c69fd8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started PATCH "/restaurants/5" for ::1 at 2015-05-10 11:00:22 -0400
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kh2snc9PceI7X8BNE0YKfEpTHbCYEXj/er8izY5HaVJ9j0lmvZ6mPM0YmmssosRQcBaBpFREvx9CZGy2ZY4V7Q==", "restaurant"=>{"name"=>"Test", "address"=>"Test", "phone"=>"test", "website"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x810c3a8 @tempfile=#<Tempfile:C:/Users/Colin/AppData/Local/Temp/RackMultipart20150510-1288-bvdjk0.jpg>, @original_filename="V1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"V1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[36mRestaurant Load (5.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mRestaurant Load (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (4.0ms)[0m  UPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?  [["image", "V1.jpg"], ["updated_at", "2015-05-10 15:00:23.352680"], ["id", 5]]
+  [1m[36m (34.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 623ms (ActiveRecord: 49.1ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2015-05-10 11:00:23 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered restaurants/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_bootstrap.html.erb (126.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 259ms (Views: 252.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.self-6bfa18fbac394794f8e18aecaaf40a74f9c25076e0fa464a548b6f45a74fcc09.css?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/restaurants.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/restaurants.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-05-10 11:00:24 -0400
+
+
+Started GET "/restaurants/5/edit" for ::1 at 2015-05-10 11:00:26 -0400
+Processing by RestaurantsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered restaurants/_form.html.erb (34.0ms)
+  Rendered restaurants/edit.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_bootstrap.html.erb (439.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 600ms (Views: 522.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/restaurants/5" for ::1 at 2015-05-10 11:00:31 -0400
+Processing by RestaurantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N1ni7QZ8uQsF4GMq8l3TApDlxkgPTyBWOvcU0LkgQgHYywcWdK1u1fOnOQzNuR0uqqBaXMMa57YCLFqrUuk+vg==", "restaurant"=>{"name"=>"Test", "address"=>"Test", "phone"=>"test", "website"=>"test", "image"=>#<ActionDispatch::Http::UploadedFile:0x52b68e8 @tempfile=#<Tempfile:C:/Users/Colin/AppData/Local/Temp/RackMultipart20150510-1288-1syg6o1.jpg>, @original_filename="V1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"restaurant[image]\"; filename=\"V1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Restaurant", "id"=>"5"}
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mRestaurant Load (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "restaurants" SET "image" = ?, "updated_at" = ? WHERE "restaurants"."id" = ?[0m  [["image", "V1.jpg"], ["updated_at", "2015-05-10 15:00:32.774390"], ["id", 5]]
+  [1m[35m (33.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/restaurants/5
+Completed 302 Found in 1118ms (ActiveRecord: 35.0ms)
+
+
+Started GET "/restaurants/5" for ::1 at 2015-05-10 11:00:32 -0400
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRestaurant Load (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered restaurants/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_bootstrap.html.erb (274.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 321ms (Views: 312.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-05-10 11:00:49 -0400
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (2.0ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  Rendered restaurants/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_bootstrap.html.erb (167.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 193ms (Views: 189.1ms | ActiveRecord: 2.0ms)
