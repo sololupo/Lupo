@@ -16,6 +16,7 @@ gem 'carrierwave-aws'
 gem 'fog'
 gem "figaro"
 gem "mini_magick"
+gem "devise"
 
 gem 'rails_12factor', group: :production
 
